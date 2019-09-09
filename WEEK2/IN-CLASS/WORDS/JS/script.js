@@ -6,7 +6,7 @@ function setup() {
 
   fill('red');
   translate(20, 20);
-  rect(50, 50, 200, 50);
+  rect(50, 50, 200, 200);
   noStroke();
 }
 
