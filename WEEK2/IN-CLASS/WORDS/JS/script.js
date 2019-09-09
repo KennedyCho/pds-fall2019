@@ -8,7 +8,7 @@ function setup() {
   translate(20, 20);
   rect(50, 50, 50, 50);
   noStroke();
-  fill(200);
+  fill(255);
 }
 
 function draw() {
