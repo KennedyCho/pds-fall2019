@@ -4,13 +4,13 @@ function setup() {
   background(240);
   noStroke();
 
-  fill('random');
-  translate(20, 20);
-  rect(50, 50, 200, 200);
-  noStroke();
+
+
 }
 
 function draw() {
 
-
+  fill('random');
+  translate(20, 20);
+  rect(random, random, 200, 200);
 }
