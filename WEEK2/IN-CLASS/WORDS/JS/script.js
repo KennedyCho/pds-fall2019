@@ -17,5 +17,5 @@ function draw() {
   rect( x+130, 230, 100, 100);
 
   // shiver
-  x = x + random(-1, 1);
+  x = x + random(-2, 2);
 }
