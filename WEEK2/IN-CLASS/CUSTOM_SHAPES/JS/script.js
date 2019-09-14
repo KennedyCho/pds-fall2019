@@ -1,27 +1,18 @@
 
 function setup() {
+  createCanvas(400, 400);
 
-  let canvasWidth = 400;
-  let canvasHeight = 400;
-
-  createCanvas(canvasWidth, canvasHeight);
-
-  // for (i = 0; i < canvasWidth; i+=10){
-  //   line(i, 0, i, canvasHeight);
-
-
-  }
 }
 
 function draw() {
-  background(220);
-  strokeWeight(5);
+  // background(220);
+  // strokeWeight(5);
 
 
 
-noStroke();
-//strokeWeight(1);
-  fill(155,0,0);
+  // noStroke();
+  // //strokeWeight(1);
+  // fill(155,0,0);
 
   // //custom shape (basic arc) with quadraticVertex
   // beginShape();
@@ -53,14 +44,21 @@ noStroke();
   // bezierVertex(0, 200, 200, -200, 400, 200);
   // endShape();
 
-  noFill();
-  beginShape();
-  fill(155, 0, 0);
-  vertex(50, 50);
-  bezierVertex(100, 200, 200, 300, 400, 200);
-  endShape();
+  // //personal example of bezierVertex
+  // noFill();
+  // beginShape();
+  // fill(155, 0, 0);
+  // vertex(50, 50);
+  // bezierVertex(100, 200, 200, 300, 400, 200);
+  // endShape();
 
 
-
+  // for loop example
+  background(220);
+  for(var i = 0; i < 4; i++) {
+    stroke(255);
+    noFill();
+    rect(i*100, 0, 100, 100);
+  }
 
 }
