@@ -1,47 +1,23 @@
 
 
 function setup() {
-  // // custom shape using vertex()
-  // createCanvas(400, 400);
-  // beginShape();
-  //   fill(0);
-  //   // point A
-  //   vertex(80, 100);
-  //   // point B
-  //   vertex(400, 140);
-  //   // point C
-  //   vertex(130, 310);
-  // endShape(CLOSE)
+  createCanvas(600, 500);
+  background(240);
 
-  // lesser than sign
-  createCanvas(500, 500);
-    background(240);
+  fill(40);
+  noStroke();
 
-    var w = width * 0.35;
-    var h = width * 0.5;
+  beginShape();
+  vertex(0, height);
+  vertex(width * 0.2, height * 0.4);
+  vertex(width * 0.35, height * 0.6);
+  vertex(width * 0.50, height * 0.2);
+  vertex(width * 0.70, height * 0.5);
+  vertex(width * 0.85, height * 0.3);
+  vertex(width, height);
+  endShape();
 
-    // causes the shape to be cut along the borders of Shape
-    // without causes the inner shevron to be filled a white
-    noFill();
-    // darker < 40 < lighter
-    // 0 = black, 255 = white
-    stroke(0);
-    // Sets the style for rendering line endings
-    // SQUARE, PROJECT, and ROUND. The default cap is ROUND
-    strokeCap(SQUARE);
-    // makes the shape grow or shrink according to canvas width
-    strokeWeight(width * 0.08);
-    // start drawing at different point
-    translate((width/2 - (w/2)) , (height/2 - (h/2)) );
-    //
-    beginShape();
-    vertex(0, 0);
-    vertex(w, h/2);
-    vertex(0, h);
-    endShape();
-
-// I don't understand why the noLoop() is used
-    noLoop();
+  noLoop();
 
 
 
