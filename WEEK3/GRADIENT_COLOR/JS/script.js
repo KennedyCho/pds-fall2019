@@ -1,12 +1,22 @@
 function setup() {
-  noStroke();
-  colorMode(HSB, 1, 1, 1);
-  fill(0.0195, 0.76, 0.82);
-  ellipse(150, height/2, 200, 200);
+  createCanvas(600, 600);
+  background('black');
 
-  fill(0.15, 0.80, 0.96);
-  ellipse(300, height/2, 200, 200);
+  var x = width * 0.7;
+  var y =  height * 0.7;
 
-  fill(0.569, 0.71, 0.67);
-  ellipse(450, height/2, 200, 200);
+  for (i=0; i < 4; i++){
+    console.log(i + 1);
+    noStroke();
+    //stroke('black');
+    //strokeWeight(2);
+    colorMode(HSB);
+    fill(7+(i*10), 76+(i*10), 82+(i*10));
+    ellipse(x/i, height/2, x/i, y/i);
+
+  }
+
+
+
+
 }
