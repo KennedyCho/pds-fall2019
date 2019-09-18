@@ -13,16 +13,17 @@ function draw() {
   c2 = lerpColor(from, to, 0.66);
   for (let i = 0; i < 15; i++) {
     fill(from);
-    rect(0,0,random(width),random(height));
+    ellipse(random(width/2),0,random(width),random(height));
     fill(c1);
-    rect(180,0,random(width),random(height)
+    ellipse(0,0,random(width),random(height)
 
     );
     fill(c2);
 
-    rect(360,0,random(width),random(height));
+    ellipse(random(width),height,random(width),random(height));
     fill(to);
-   rect(540,0,random(width),random(height));
+   ellipse(width,height,random(width),random(height));
   }
   frameRate(5);
+  noLoop();
 }
