@@ -1,6 +1,6 @@
 function setup() {
   createCanvas(500, 500);
-  background(0);
+  background(255);
 
   var w = width;
   var h = height;
@@ -24,10 +24,10 @@ function setup() {
     bezierVertex(w*8/10, h*4/10, w*5/10, h*3/10, w*2/10, h*3/10);
   endShape(CLOSE)
 
-  //water
+  //break
   stroke('green');
   beginShape();
-    fill(0);
+    fill(255);
     vertex(w*5.3/10,h*2.9/10);
     vertex(w*5.1/10,h*4/10);
     vertex(w*5.5/10,h*3.5/10);
@@ -36,10 +36,22 @@ function setup() {
     vertex(w*5.7/10,h*4.5/10);
     vertex(w*6.4/10,h*4.2/10);
     vertex(w*5.8/10,h*5/10);
-    vertex(w*8/10,h*4.6/10);
+    vertex(w*9/10,h*6/10);
 
   endShape();
 
+  // water
+  stroke('grey');
+  noFill();
+  beginShape();
+    vertex(w*5.3/10, h*3/10);
+    bezierVertex(width*8/24,height*1/32,  width*8/24,height*17/32  ,width*9/24,height*17/32);
+    bezierVertex(width*10/24,height*1/32,  width*11/24,height*17/32  ,width*10/24,height*17/32);
+    bezierVertex(width*11/24,height*1/32,  width*12/24,height*17/32  ,width*11/24,height*17/32);
+    bezierVertex(width*12/24,height*1/32,  width*13/24,height*17/32  ,width*12/24,height*17/32);
+    //vertex(w*6/10, h*6/10);
+
+  endShape();
 
 
   noLoop();
