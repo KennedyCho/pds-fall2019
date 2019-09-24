@@ -1,17 +1,23 @@
+
 function setup() {
-  createCanvas(600, 600);
-  background(0);
+  createCanvas(720, 400);
+  background(255);
+  noStroke();
 
-  let w = width;
-  let h = height;
+  let x = random(0, width);
+  let y = random(0, height);
 
-  stroke('red');
-  strokeWeight(5);
-  strokeCap(ROUND);
-  beginShape();
-    vertex(w*1/10, h*1/10);
-    bezierVertex(w*2/10, h*5/10, w*3/10, h*4/10, w*4/10, h*3/10, w*6/10, h*5/10, w*9/10, h*9/10);
+  let x2 = random(0, width);
+  let y2 = random(0, height);
 
-  endShape(CLOSE)
+
+  for (i=0; i < 50; i++){
+    noFill();
+    stroke(0);
+    beginShape();
+      line(i/x, i/y, i/x2, i/y2);
+    endShape();
+
+  }
 
 }
