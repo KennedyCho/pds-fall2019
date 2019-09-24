@@ -1,6 +1,6 @@
 function setup() {
   createCanvas(500, 500);
-  background(255);
+  background(0);
 
   var w = width;
   var h = height;
@@ -9,7 +9,7 @@ function setup() {
   var h2 = height * 0.3;
 
   // balloon top
-  stroke('red');
+  //stroke('red');
   beginShape();
     vertex(w*1/10, h*3/10);
     vertex(w*2/10, h*2/10);
@@ -17,7 +17,7 @@ function setup() {
   endShape(CLOSE)
 
   // balloon
-  stroke('blue');
+  //stroke('blue');
   beginShape();
     vertex(w*2/10, h*3/10);
     bezierVertex(w*2/10, h*5/10, w*2/10, h*9/10, w*6/10, h*6/10);
@@ -25,9 +25,10 @@ function setup() {
   endShape(CLOSE)
 
   //break
-  stroke('green');
+  stroke('black');
+
   beginShape();
-    fill(255);
+    fill(0);
     vertex(w*5.3/10,h*2.9/10);
     vertex(w*5.1/10,h*4/10);
     vertex(w*5.5/10,h*3.5/10);
@@ -40,17 +41,26 @@ function setup() {
 
   endShape();
 
-  // water
+//water drops
   stroke('grey');
-  noFill();
+  fill(255);
   beginShape();
-    vertex(w*5.3/10, h*3/10);
-    bezierVertex(width*8/24,height*1/32,  width*8/24,height*17/32  ,width*9/24,height*17/32);
-    bezierVertex(width*10/24,height*1/32,  width*11/24,height*17/32  ,width*10/24,height*17/32);
-    bezierVertex(width*11/24,height*1/32,  width*12/24,height*17/32  ,width*11/24,height*17/32);
-    bezierVertex(width*12/24,height*1/32,  width*13/24,height*17/32  ,width*12/24,height*17/32);
-    //vertex(w*6/10, h*6/10);
+    vertex(w*6/10, h*3/10);
+    bezierVertex(width*10/15,0,  width*6/15,height*1/15  ,width*6/10,height*3/10);
+  endShape();
 
+  stroke('grey');
+  fill(255);
+  beginShape();
+    vertex(w*7/10, h*3/10);
+    bezierVertex(width*13/15,height*3/15,  width*12/15,height*1/15  ,width*7/10,height*3/10);
+  endShape();
+
+  stroke('grey');
+  fill(255);
+  beginShape();
+    vertex(w*6.9/10, h*4.5/10);
+    bezierVertex(width*15/15,height*5/15,  width*13/15,height*8/15  ,width*6.9/10,height*4.5/10);
   endShape();
 
 
