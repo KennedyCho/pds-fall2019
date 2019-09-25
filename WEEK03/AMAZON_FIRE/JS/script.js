@@ -1,23 +1,33 @@
 
 function setup() {
-  createCanvas(720, 400);
-  background(255);
-  noStroke();
+  // 2480 X 3508 pixels
+  createCanvas(2480/5, 3508/5);
+  background('grey');
 
-  let x = random(0, width);
-  let y = random(0, height);
+  colorMode(HSB);
 
-  let x2 = random(0, width);
-  let y2 = random(0, height);
-
-
-  for (i=0; i < 50; i++){
-    noFill();
-    stroke(0);
-    beginShape();
-      line(i/x, i/y, i/x2, i/y2);
-    endShape();
+  for (i=0; i<10000; i++){
+    let leafX = random(0, width);
+    let leafSize = random(5, 30);
+    let leafY = random(100, 800);
+    let leafWidth = random(5, 40)
+    let leafColorSat = random(5, 100);
+    noStroke();
+    fill(104, leafColorSat, 41);
+    ellipse(leafX, leafY, leafWidth, leafSize);
 
   }
+
+
+
+  for (i=0; i<150; i++){
+    let positionX = random(0, width);
+    let flameHeight = random(10, 700);
+    let colorSat = random(5, 100);
+    noStroke();
+    fill(19, colorSat, 72);
+    ellipse(positionX, height, 40, flameHeight);
+  }
+
 
 }
