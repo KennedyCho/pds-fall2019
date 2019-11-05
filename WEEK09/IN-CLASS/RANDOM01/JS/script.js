@@ -138,7 +138,7 @@
 //
 //   noiseDetail(4, 0.75);
 //   noiseSeed(3);
-//
+// // offset 
 //   var noiseStep = 0;
 //
 //   translate(width/2, 100);
