@@ -24,7 +24,7 @@ function setup() {
 
 // EXAMPLE 02
 
-// function setup() { 
+// function setup() {
 //   createCanvas(255, 255);
 //   pixelDensity(1);
 //   background(30);
