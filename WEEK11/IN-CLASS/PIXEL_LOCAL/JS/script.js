@@ -4,11 +4,11 @@
 
 let img;
 function preload() {
-  img = loadImage("bruce.jpg");
+  img = loadImage("ASSETS/photo.jpg");
 }
 
 function setup() {
-  createCanvas(1000, 563);
+  createCanvas(1000, 1000);
 	pixelDensity(1);
   image(img, 0, 0);
 
@@ -19,22 +19,22 @@ function setup() {
       let index = (x + (y * width)) * 4;
 
       // Simple red filter
-      //pixels[index] = 255;
+      // pixels[index] = 255;
 
       // Advanced black and white filter
-      let r = pixels[index];
-      let g = pixels[index+1];
-      let b = pixels[index+2];
-      //var hsl = hsluv.rgbToHsluv([r / 255, g / 255, b / 255]);
-
-      //hsl[1] = 0;
-
-      let rgb = hsluv.hsluvToRgb(hsl);
-      pixels[index] = rgb[0] * 255;
-      pixels[index+1] = rgb[1] * 255;
-      pixels[index+2] = rgb[2] * 255;
+      // let r = pixels[index];
+      // let g = pixels[index+1];
+      // let b = pixels[index+2];
+      // var hsl = hsluv.rgbToHsluv([r / 255, g / 255, b / 255]);
+      //
+      // hsl[1] = 0;
+      //
+      // let rgb = hsluv.hsluvToRgb(hsl);
+      // pixels[index] = rgb[0] * 255;
+      // pixels[index+1] = rgb[1] * 255;
+      // pixels[index+2] = rgb[2] * 255;
     }
   }
   updatePixels();
 
-} 
+}
