@@ -1,71 +1,28 @@
-// create font variable
-// let robotoLight;
-
-let x;
-let y;
-let xPadding;
-let yPadding;
-let spacing;
-let xMove;
-let yMove;
-let fontSize;
-let radius;
-let circleSize;
-// < > { }
+let canvSize = 500;
+let img;
 
 function preload(){
-//   change value of variable
-  robotoLight = loadFont('ASSETS/Roboto-Thin.ttf');
-
+  imgReagan = loadImage('ASSETS/photo.jpg');
 }
 
 function setup() {
-  createCanvas(400, 400);
-  background(220);
-
-  translate(width/2 ,height/2);
-
-  angleMode(DEGREES);
-
-  xPadding = 30;
-  yPadding = 30;
-
-  x = 0;
-  y = 0;
-
-  spacing = 2;
-
-  xMove = 0;
-  yMove = 0;
-
-  fontSize = 30;
-  radius = width-100;
-
-  circleSize = width * 15;
-
-  textFont(robotoLight);
-  textSize(fontSize);
-  textAlign(CENTER);
-
-
-  drawSemiColon(x, y, radius, spacing, fontSize)
+  createCanvas(canvSize, canvSize);
 
 }
 
+ // imgFilters = [THRESHOLD, GRAY, OPAQUE, INVERT, POSTERIZE, BLUR, ERODE, DILATE];
 
-function drawSemiColon(x, y, radius, spacing, fontSize){
+// 198 × 320
+let imgW = 198;
+let imgH = 320;
+let step = 5;
 
-  console.log(cos(x));
-  textSize(fontSize);
-  fill(255-radius);
-  text('O', cos(x) * radius, sin(y)* radius);
+function draw(){
+  background(200);
 
-  if(x <= circleSize){
+  translate(-imgW/2, -imgH/2);
+  image(imgReagan, width/2, height/2);
 
-    drawSemiColon(x + spacing , y + spacing , radius - 0.1, spacing);
-
-
-  }
-
-
+  filter(POSTERIZE, step);
+  // noLoop();
 }
