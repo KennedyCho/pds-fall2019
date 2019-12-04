@@ -25,3 +25,13 @@ body {
   /* This centers our sketch vertically. */
   align-items: center;
 }
+
+#reloadButton{
+  color: black;
+  text-decoration: none;
+
+}
+#reloadButton:hover{
+  color: red;
+
+}
