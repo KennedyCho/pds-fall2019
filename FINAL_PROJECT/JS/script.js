@@ -8,16 +8,16 @@ function setup() {
   createCanvas(canvSize, canvSize);
   background(255);
 
-  // glass();
+  glass();
   let boolShape = random() < 0.5;
 
-  // if (boolShape) {
-  //   // square
-  //   sqrShape();
-  //
-  // }else {
-  //   circShape();
-  // }
+  if (boolShape) {
+    // square
+    sqrShape();
+
+  }else {
+    circShape();
+  }
 
 
   // fan();
@@ -27,24 +27,20 @@ function setup() {
 }
 
 function glass() {
-  var xOff = 0;
-  var yOff = 0;
 
-  noiseSeq = noise(xOff, yOff);
-
-
-  let start = width/4;
+  let start = width/9;
   noStroke();
   colorMode(HSB);
-  fill(100, 100, 31, 0.5);
+  var colorVal = map(noise(random(0,220)), 0, 1, 0, 100);
   for (var i = 0; i < 5; i++) {
+    fill(colorVal, 100, 80, (i*25)/100);
     beginShape();
       vertex(start, start+100);
       vertex(start+200, start+50);
       vertex(start+200-50, start+200-50);
       vertex(start-50, start+200);
     endShape();
-    start += 20;
+    start += 40;
   }
 
 
@@ -63,29 +59,30 @@ function glass() {
 // x1, x2, y1, y2
 
 
-function ring() {
-  var xOff = 0;
-
-
-
-  while (xOff < 4) {
-    xOff += 1;
-
-    // A = pi * R ** 2
-    // ellipse(cos(end)*rad+circX, sin(end)*rad+circY, 20);
-
-    noiseSeq = noise(xOff);
-    console.log(xOff);
-    console.log(noise(xOff));
-    console.log(noiseSeq*width);
-    line(0, noiseSeq*height, noiseSeq*width, 20);
-
-  }
-}
+// function ring() {
+//   var xOff = 0;
+//
+//
+//
+//   while (xOff < 4) {
+//     xOff += 1;
+//
+//     // A = pi * R ** 2
+//     // ellipse(cos(end)*rad+circX, sin(end)*rad+circY, 20);
+//
+//     noiseSeq = noise(xOff);
+//     console.log(xOff);
+//     console.log(noise(xOff));
+//     console.log(noiseSeq*width);
+//     line(0, noiseSeq*height, noiseSeq*width, 20);
+//
+//   }
+// }
 
 
 function circShape() {
 
+  stroke(0);
   // diameter
   var circShapeDia = 300;
   // radius
@@ -126,8 +123,8 @@ function sqrShape() {
 
     // vertical line
     // Point 1 & 2 have same x
-    x1 = random(width/5, width - width/5);
-    y1 = random(height/5, height/2-height/5);
+    x1 = random(width/3, width - width/5);
+    y1 = random(height/3, height/2-height/5);
 
     // ------------------
     x2 = x1;
@@ -227,7 +224,7 @@ function sqrShape() {
 }
 
 function draw() {
-  ring();
+  // ring();
 
   noLoop();
 }
